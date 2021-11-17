@@ -35,4 +35,9 @@ public class ScheduledTasks {
     public void reportCurrentTime() {
         log.info("The time is now {}", dateFormat.format(new Date()));
     }
+
+    @Scheduled(cron ="0 18 0 * * *")
+    public void runCron() {
+        log.info("Running Cron");
+    }
 }
